@@ -1,0 +1,15 @@
+body {
+    background-color: rgba(229, 233, 122, 0.63);
+    margin-left: 44%;
+    margin-top: 20%;
+}
+
+.td1 {
+    width: 70px;
+    height: 70px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 5px;
+    text-align: center;
+    cursor: pointer;
+}
