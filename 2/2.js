@@ -1,6 +1,26 @@
+var selectedList = [];
+var count = 0;
+var col, row = 0;
+
 function setClick(id) {
+    const index = selectedList.indexOf(id);
     var td = document.getElementById(id);
-    td.style.background = "red";
+    if (index == -1) {
+
+        td.style.background = "red";
+        selectedList.push(id);
+        count++;
+
+    } else {
+        td.style.background = "none";
+        selectedList.splice(index, 1);
+        count--;
+    }
+    document.getElementById("selectCount").innerText = count;
+    if (count === row * col) alert("fill out")
+
+
+
 }
 
 
@@ -8,8 +28,8 @@ function setClick(id) {
 
 
 function createHall() {
-    var row = document.getElementById("row").value;
-    var col = document.getElementById("col").value;
+    row = document.getElementById("row").value;
+    col = document.getElementById("col").value;
     var table = document.createElement("table");
     table.classList.add("table1");
     for (let i = 0; i < row; i++) {
